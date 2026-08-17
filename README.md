@@ -3,6 +3,12 @@
 A simple web-based Unit Converter built using Node.js, Express.js, and EJS.  
 The application allows users to convert values between different units of length, weight, and temperature.
 
+## Project URL
+
+https://roadmap.sh/projects/unit-converter
+
+This project was built as part of the [roadmap.sh Unit Converter](https://roadmap.sh/projects/unit-converter) backend project.
+
 ## Features
 
 - Convert between different length units
@@ -16,6 +22,7 @@ The application allows users to convert values between different units of length
 ## Supported Units
 
 ### Length
+
 - Millimeter (mm)
 - Centimeter (cm)
 - Meter (m)
@@ -26,6 +33,7 @@ The application allows users to convert values between different units of length
 - Mile (mi)
 
 ### Weight
+
 - Milligram (mg)
 - Gram (g)
 - Kilogram (kg)
@@ -33,6 +41,7 @@ The application allows users to convert values between different units of length
 - Pound (lb)
 
 ### Temperature
+
 - Celsius (°C)
 - Fahrenheit (°F)
 - Kelvin (K)
@@ -105,7 +114,7 @@ The application will automatically redirect to the Length Converter.
 ## Routes
 
 | Route | Description |
-|---|---|
+| --- | --- |
 | `/length` | Length converter |
 | `/weight` | Weight converter |
 | `/temperature` | Temperature converter |
@@ -120,3 +129,6 @@ The application will automatically redirect to the Length Converter.
 ## Author
 
 **Tanish Dete**
+## Project URL
+
+https://roadmap.sh/projects/unit-converter
