@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Unit Converter</h1>
+    <nav>
+      <a href="/length" class="<%= category === 'length' ? 'active' : '' %>">Length</a>
+      <a href="/weight" class="<%= category === 'weight' ? 'active' : '' %>">Weight</a>
+      <a href="/temperature" class="<%= category === 'temperature' ? 'active' : '' %>">Temperature</a>
+    </nav>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <% if (!submitted) { %>
+      <form method="POST" action="/<%= category %>" target="_self">
+        <label>Enter the <%= category %> to convert</label>
+        <input type="text" name="value" required>
+
+        <label>Unit to Convert from</label>
+        <select name="fromUnit">
+          <% units.forEach(u => { %>
+            <option value="<%= u %>"><%= u %></option>
+          <% }) %>
+        </select>
+
+        <label>Unit to Convert to</label>
+        <select name="toUnit">
+          <% units.forEach(u => { %>
+            <option value="<%= u %>"><%= u %></option>
+          <% }) %>
+        </select>
+
+        <button type="submit">Convert</button>
+      </form>
+    <% } else { %>
+      <p class="result-label">Result of your calculation</p>
+      <h2><%= value %> <%= fromUnit %> = <%= result %><%= toUnit %></h2>
+      <a href="/<%= category %>"><button type="button">Reset</button></a>
+    <% } %>
+  </div>
+</body>
+</html>
